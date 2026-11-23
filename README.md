@@ -34,7 +34,6 @@ The UTM values are saved with every lead. If they're missing, the page fills in 
 - [ ] `CONFIG.ENDPOINT` set and tested on a phone over mobile data
 - [ ] Privacy notice link (`concentrik.com/privacy`) works and covers form data
 - [ ] Reply time confirmed. The page says "personally", not a number of days
-- [ ] Brochure photos: the lounge and boardroom images show people. Check they're real with releases, or label them as indicative (brand PRD §6.5)
 - [ ] SVG logo when available (replaces `assets/logo-white.png`)
 - [ ] Analytics: the page pushes `cta_click`, `invitation_form_start` and `invitation_form_submit` to `dataLayer`, but only if a consented tag manager is present. No tags load by default.
 

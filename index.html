@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Concentrik at Plan X</title>
-<meta name="description" content="You met Concentrik at Plan X. Private offices and a members' circle for founders and executives at i-Rise Tower, Barsha Heights. Request an invitation.">
+<meta name="description" content="You met Concentrik at Plan X. Private offices and a members' circle for founders and executives at i-Rise Tower, Barsha Heights. Join the Concentrik mailing list.">
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#1F2632">
 <meta property="og:title" content="Concentrik at Plan X">
@@ -255,7 +255,7 @@
   }
 
   /* ---------- One-pager layout ---------- */
-  .page { min-height: 100vh; min-height: 100svh; display: grid; grid-template-columns: 1fr; background: var(--stone); }
+  .page { min-height: 100vh; min-height: 100svh; display: grid; grid-template-columns: 1fr; align-content: start; background: var(--stone); }
   .welcome { position: relative; overflow: hidden; padding: 1.5rem var(--gutter) 2.6rem; }
   .welcome-bg { position: absolute; inset: 0; background: url("assets/hero-wood.jpg") center 70% / cover no-repeat; }
   .welcome-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(31,38,50,.72) 0%, rgba(31,38,50,.80) 55%, rgba(31,38,50,.92) 100%); }
@@ -311,8 +311,8 @@
   <section class="enquire" id="enquire" aria-labelledby="form-title">
     <div class="form-card">
       <div class="form-head">
-        <h2 id="form-title">Request an invitation.</h2>
-        <p class="small">Two minutes. Jeremy's team reads every request personally.</p>
+        <h2 id="form-title">Join the list.</h2>
+        <p class="small">Be the first to hear about Concentrik: the opening, events and invitations.</p>
       </div>
       <form class="form" id="lead-form" novalidate>
           <div class="field" data-field="fullName">
@@ -323,105 +323,8 @@
 
           <div class="field" data-field="email">
             <label for="email">Email</label>
-            <input class="input" id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-describedby="email-help email-err">
-            <p class="help" id="email-help">Your invitation will come here.</p>
-            <p class="error" id="email-err" role="alert">Please add an email address so we can reply.</p>
-          </div>
-
-          <div class="field" data-field="phone">
-            <label for="phone">Mobile</label>
-            <div class="phone">
-              <select class="input" id="dialCode" name="dialCode" aria-label="Country code" autocomplete="tel-country-code">
-                <option value="+971" selected>AE +971</option>
-                <option value="+966">SA +966</option>
-                <option value="+974">QA +974</option>
-                <option value="+965">KW +965</option>
-                <option value="+973">BH +973</option>
-                <option value="+968">OM +968</option>
-                <option value="+44">GB +44</option>
-                <option value="+353">IE +353</option>
-                <option value="+33">FR +33</option>
-                <option value="+49">DE +49</option>
-                <option value="+41">CH +41</option>
-                <option value="+39">IT +39</option>
-                <option value="+34">ES +34</option>
-                <option value="+31">NL +31</option>
-                <option value="+7">RU +7</option>
-                <option value="+90">TR +90</option>
-                <option value="+20">EG +20</option>
-                <option value="+962">JO +962</option>
-                <option value="+961">LB +961</option>
-                <option value="+91">IN +91</option>
-                <option value="+92">PK +92</option>
-                <option value="+86">CN +86</option>
-                <option value="+65">SG +65</option>
-                <option value="+61">AU +61</option>
-                <option value="+27">ZA +27</option>
-                <option value="+1">US +1</option>
-              </select>
-              <input class="input" id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" required aria-describedby="phone-help phone-err">
-            </div>
-            <p class="help" id="phone-help">A number outside the UAE is fine if you haven't moved yet.</p>
-            <p class="error" id="phone-err" role="alert">Please add a mobile number, digits only.</p>
-          </div>
-
-          <div class="row-2">
-            <div class="field" data-field="company">
-              <label for="company">Company</label>
-              <input class="input" id="company" name="company" type="text" autocomplete="organization" required aria-describedby="company-err">
-              <p class="error" id="company-err" role="alert">Please add your company. The one you're setting up counts.</p>
-            </div>
-            <div class="field" data-field="role">
-              <label for="role">Your role</label>
-              <input class="input" id="role" name="role" type="text" autocomplete="organization-title" required aria-describedby="role-err" placeholder="">
-              <p class="error" id="role-err" role="alert">Please add your role, for example CEO or Founder.</p>
-            </div>
-          </div>
-
-          <div class="field" data-field="linkedin">
-            <label for="linkedin">LinkedIn profile <span class="optional">(optional)</span></label>
-            <input class="input" id="linkedin" name="linkedin" type="url" inputmode="url" autocomplete="url" placeholder="linkedin.com/in/" aria-describedby="linkedin-help linkedin-err">
-            <p class="help" id="linkedin-help">It helps us prepare your invitation.</p>
-            <p class="error" id="linkedin-err" role="alert">That doesn't look like a link. Leave it empty if you prefer.</p>
-          </div>
-
-          <fieldset data-field="interest" aria-describedby="interest-err">
-            <legend class="legend">What are you interested in?</legend>
-            <div class="options options-stack">
-              <label class="option">
-                <input type="radio" name="interest" value="Executive Circle">
-                <span class="card"><span class="dot"></span><span class="t">Executive Circle</span><span class="d">For C-suite, directors and senior executives</span></span>
-              </label>
-              <label class="option">
-                <input type="radio" name="interest" value="Founder Circle">
-                <span class="card"><span class="dot"></span><span class="t">Founder Circle</span><span class="d">For founders and business owners</span></span>
-              </label>
-              <label class="option">
-                <input type="radio" name="interest" value="Membership with a private office">
-                <span class="card"><span class="dot"></span><span class="t">Membership with a private office</span><span class="d">For you and your team, at i-Rise Tower</span></span>
-              </label>
-            </div>
-            <p class="help" style="margin-top:.5rem">Not sure? Choose Executive Circle. We'll suggest the right fit when we reply.</p>
-            <p class="error" id="interest-err" role="alert">Please choose one.</p>
-          </fieldset>
-
-          <div class="field reveal" data-field="teamSize" id="teamSizeWrap" hidden>
-            <label for="teamSize">Team size</label>
-            <select class="input" id="teamSize" name="teamSize" aria-describedby="teamSize-err">
-              <option value="">Choose</option>
-              <option>Just me</option>
-              <option>2 to 3</option>
-              <option>4 to 6</option>
-              <option>7 to 9</option>
-              <option>10 or more</option>
-            </select>
-            <p class="error" id="teamSize-err" role="alert">Please choose your team size.</p>
-          </div>
-
-          <div class="field" data-field="message">
-            <label for="message">What would make membership worth it for you? <span class="optional">(optional)</span></label>
-            <textarea class="input" id="message" name="message" rows="3" maxlength="1000" aria-describedby="message-help"></textarea>
-            <p class="help" id="message-help">Tell us what you're building in Dubai.</p>
+            <input class="input" id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-describedby="email-err">
+            <p class="error" id="email-err" role="alert">Please add an email address.</p>
           </div>
 
           <!-- Honeypot: hidden from people, filled by bots -->
@@ -432,22 +335,22 @@
 
           <div class="consent" data-field="consent">
             <input id="consent" name="consent" type="checkbox" value="yes" required aria-describedby="consent-err">
-            <label for="consent">I agree that Concentrik can use these details to review my invitation request and contact me about it. Concentrik won't sell them. <a href="https://www.concentrik.com/privacy" target="_blank" rel="noopener">Privacy notice</a></label>
-            <p class="error" id="consent-err" role="alert">Please tick the box so we can contact you.</p>
+            <label for="consent">I agree that Concentrik can email me news and invitations. I can unsubscribe at any time, and Concentrik won't sell my details. <a href="https://www.concentrik.com/privacy" target="_blank" rel="noopener">Privacy notice</a></label>
+            <p class="error" id="consent-err" role="alert">Please tick the box so we can email you.</p>
           </div>
 
           <div class="submit-row">
-            <button class="btn btn-primary" type="submit" id="submitBtn">Request an invitation</button>
+            <button class="btn btn-primary" type="submit" id="submitBtn">Join the list</button>
             <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
           </div>
         </form>
 
         <div class="thanks" id="thanks" tabindex="-1" aria-live="polite">
-          <p class="eyebrow">Request received</p>
-          <h3 id="thanksTitle">Thank you. We have your request.</h3>
+          <p class="eyebrow">You're on the list</p>
+          <h3 id="thanksTitle">Thank you. You're on the list.</h3>
           <hr class="rule" aria-hidden="true">
-          <p>Jeremy's team will review it personally and be in touch about your invitation.</p>
-          <p class="small">Until then, you're welcome to write to us at <a href="mailto:contact@concentrik.com">contact@concentrik.com</a>.</p>
+          <p>We'll be in touch with news from Concentrik, and invitations when there's something worth your time.</p>
+          <p class="small">Questions in the meantime? Write to <a href="mailto:contact@concentrik.com">contact@concentrik.com</a>.</p>
           <p style="margin-top:1.6rem"><a class="btn btn-secondary" href="https://www.concentrik.com" data-cta="thanks_site">Visit concentrik.com</a></p>
         </div>
     </div>
@@ -464,9 +367,9 @@
 <script>
 /* ---------------------------------------------------------------
    CONFIG: set ENDPOINT before printing the QR code.
-   Accepts any endpoint that takes a form-encoded POST and returns 2xx:
-   Google Apps Script web app (see apps-script.gs), Formspree, n8n,
-   Make, Zapier, or a HubSpot/Nexudus middleware.
+   Any endpoint that takes a form-encoded POST and returns 2xx works:
+   the Google Apps Script in apps-script.gs, Mailchimp/Brevo via a
+   webhook, Formspree, n8n, Make or Zapier.
    --------------------------------------------------------------- */
 const CONFIG = {
   ENDPOINT: "",               // e.g. "https://script.google.com/macros/s/XXXX/exec"
@@ -479,75 +382,42 @@ const CONFIG = {
   const btn = document.getElementById("submitBtn");
   const status = document.getElementById("formStatus");
   const thanks = document.getElementById("thanks");
-  const teamWrap = document.getElementById("teamSizeWrap");
   const params = new URLSearchParams(location.search);
-  
+
   // Analytics hooks: push to dataLayer only if a consented tag manager created it.
   const track = (event, data) => { if (Array.isArray(window.dataLayer)) window.dataLayer.push(Object.assign({ event, page: "plan-x" }, data || {})); };
-  document.querySelectorAll("[data-cta]").forEach(a => a.addEventListener("click", () => track("cta_click", { cta_name: a.dataset.cta })));
   let started = false;
-  form.addEventListener("focusin", () => { if (!started) { started = true; track("invitation_form_start"); } });
+  form.addEventListener("focusin", () => { if (!started) { started = true; track("signup_form_start"); } });
 
-  // Team size only matters when they want an office.
-  const OFFICE = "Membership with a private office";
-  form.querySelectorAll('input[name="interest"]').forEach(r => r.addEventListener("change", () => {
-    teamWrap.hidden = r.value !== OFFICE;
-    clear(form.querySelector('[data-field="interest"]'));
-  }));
-
-  // Pre-select from the link, e.g. ?interest=founder
-  const pre = (params.get("interest") || "").toLowerCase();
-  const map = { office: OFFICE, executive: "Executive Circle", founder: "Founder Circle" };
-  if (map[pre]) { const r = form.querySelector(`input[name="interest"][value="${map[pre]}"]`); if (r) { r.checked = true; r.dispatchEvent(new Event("change")); } }
-
-  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   const rules = {
     fullName: v => v.trim().length >= 2,
-    email: v => emailRe.test(v.trim()),
-    phone: v => /^[0-9]{6,14}$/.test(v.replace(/[\s()\-.]/g, "").replace(/^0+/, "")),
-    company: v => v.trim().length >= 1,
-    role: v => v.trim().length >= 2,
-    linkedin: v => v.trim() === "" || /^(https?:\/\/)?([\w-]+\.)+[a-z]{2,}(\/\S*)?$/i.test(v.trim())
+    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())
   };
-
+  const wrapOf = name => form.querySelector(`[data-field="${name}"]`);
   function setInvalid(el, on) {
     el.classList.toggle("invalid", on);
-    el.querySelectorAll("input, select, textarea").forEach(i => { if (i.type !== "radio") i.setAttribute("aria-invalid", on ? "true" : "false"); });
+    el.querySelectorAll("input").forEach(i => i.setAttribute("aria-invalid", on ? "true" : "false"));
   }
-  function clear(el) { if (el) setInvalid(el, false); }
 
-  // Clear an error as soon as the person fixes it.
-  form.addEventListener("input", e => {
-    const wrap = e.target.closest("[data-field]");
-    if (wrap && wrap.classList.contains("invalid")) {
-      const name = wrap.dataset.field;
-      if (rules[name] ? rules[name](e.target.value) : true) clear(wrap);
-    }
+  // Validate when a field is left, and clear errors as soon as they're fixed.
+  Object.keys(rules).forEach(name => {
+    const input = form.elements[name];
+    input.addEventListener("blur", () => { if (input.value.trim()) setInvalid(wrapOf(name), !rules[name](input.value)); });
+    input.addEventListener("input", () => { if (rules[name](input.value)) setInvalid(wrapOf(name), false); });
   });
-  form.addEventListener("change", e => { const w = e.target.closest("[data-field]"); if (w && (e.target.type === "checkbox" || e.target.tagName === "SELECT") && w.classList.contains("invalid")) clear(w); });
-  // Validate text fields when the person leaves them, not while typing.
-  form.querySelectorAll(".field .input").forEach(i => i.addEventListener("blur", () => {
-    const w = i.closest("[data-field]"); const name = w.dataset.field;
-    if (rules[name] && i.value.trim() !== "") setInvalid(w, !rules[name](i.value));
-  }));
+  form.elements.consent.addEventListener("change", e => { if (e.target.checked) setInvalid(wrapOf("consent"), false); });
 
   function validate() {
     let first = null;
-    const fail = (el, focusEl) => { setInvalid(el, true); if (!first) first = focusEl || el; };
     Object.keys(rules).forEach(name => {
-      const input = form.elements[name]; const wrap = form.querySelector(`[data-field="${name}"]`);
-      if (!rules[name](input.value)) fail(wrap, input); else clear(wrap);
+      const ok = rules[name](form.elements[name].value);
+      setInvalid(wrapOf(name), !ok);
+      if (!ok && !first) first = form.elements[name];
     });
-    const interest = form.querySelector('input[name="interest"]:checked');
-    const iWrap = form.querySelector('[data-field="interest"]');
-    if (!interest) fail(iWrap, form.querySelector('input[name="interest"]')); else clear(iWrap);
-    if (interest && interest.value === OFFICE) {
-      const ts = form.elements.teamSize; const tWrap = form.querySelector('[data-field="teamSize"]');
-      if (!ts.value) fail(tWrap, ts); else clear(tWrap);
-    }
-    const c = form.elements.consent; const cWrap = form.querySelector('[data-field="consent"]');
-    if (!c.checked) fail(cWrap, c); else clear(cWrap);
-    if (first) first.focus({ preventScroll: false });
+    const c = form.elements.consent;
+    setInvalid(wrapOf("consent"), !c.checked);
+    if (!c.checked && !first) first = c;
+    if (first) first.focus();
     return !first;
   }
 
@@ -555,23 +425,11 @@ const CONFIG = {
     e.preventDefault();
     status.textContent = "";
     if (!validate()) return;
+    if (form.elements.website.value) { showThanks(); return; }   // bot
 
-    // Bot filled the honeypot: pretend success, send nothing.
-    if (form.elements.website.value) { showThanks(); return; }
-
-    const fd = new FormData(form);
-    const data = new URLSearchParams();
-    const phoneDigits = fd.get("phone").replace(/[^\d]/g, "").replace(/^0+/, "");
     const fields = {
-      fullName: fd.get("fullName").trim(),
-      email: fd.get("email").trim(),
-      phone: `${fd.get("dialCode")} ${phoneDigits}`,
-      company: fd.get("company").trim(),
-      role: fd.get("role").trim(),
-      linkedin: normaliseUrl(fd.get("linkedin")),
-      interest: fd.get("interest"),
-      teamSize: fd.get("interest") === OFFICE ? fd.get("teamSize") : "",
-      message: (fd.get("message") || "").trim(),
+      fullName: form.elements.fullName.value.trim(),
+      email: form.elements.email.value.trim(),
       consent: "yes",
       website: "",
       event: CONFIG.EVENT_NAME,
@@ -581,41 +439,33 @@ const CONFIG = {
       utm_campaign: params.get("utm_campaign") || "plan-x",
       utm_content: params.get("utm_content") || "",
       pageUrl: location.href,
-      referrer: document.referrer,
-      submittedAt: new Date().toISOString(),
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || ""
+      submittedAt: new Date().toISOString()
     };
-    Object.entries(fields).forEach(([k, v]) => data.append(k, v || ""));
+    const data = new URLSearchParams(fields);
 
     btn.disabled = true; const label = btn.textContent; btn.textContent = "Sending…";
     try {
       if (!CONFIG.ENDPOINT) {
-        console.warn("[Concentrik] CONFIG.ENDPOINT is empty. Submission not sent:", fields);
+        console.warn("[Concentrik] CONFIG.ENDPOINT is empty. Sign-up not sent:", fields);
       } else {
         const res = await fetch(CONFIG.ENDPOINT, { method: "POST", body: data, headers: { Accept: "application/json" } });
         if (!res.ok) throw new Error("HTTP " + res.status);
       }
-      track("invitation_form_submit", { interest: fields.interest, team_size: fields.teamSize });
+      track("signup_form_submit");
       showThanks(fields);
     } catch (err) {
       console.error(err);
       btn.disabled = false; btn.textContent = label;
-      status.innerHTML = 'We couldn’t send that just now. Please try again, or email <a href="mailto:contact@concentrik.com">contact@concentrik.com</a>.';
+      status.innerHTML = 'We couldn\u2019t send that just now. Please try again, or email <a href="mailto:contact@concentrik.com">contact@concentrik.com</a>.';
     }
   });
 
-  function normaliseUrl(v) {
-    v = (v || "").trim();
-    return v && !/^https?:\/\//i.test(v) ? "https://" + v : v;
-  }
-
   function showThanks(f) {
     const first = f && f.fullName ? f.fullName.split(/\s+/)[0] : "";
-    if (first) document.getElementById("thanksTitle").textContent = `Thank you, ${first}. We have your request.`;
+    if (first) document.getElementById("thanksTitle").textContent = `Thank you, ${first}. You're on the list.`;
     form.style.display = "none";
     thanks.classList.add("show");
     thanks.focus();
-    thanks.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
   }
 })();
 </script>

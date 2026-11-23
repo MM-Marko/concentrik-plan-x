@@ -1,40 +1,37 @@
 # Plan X landing page (brochure QR)
 
-A static page you can host anywhere: Netlify, Vercel, S3 or a folder on concentrik.com. Suggested URL: `concentrik.com/planx`.
+A one-page mailing list sign-up for people who pick up the brochure at Plan X. It's a static page that can be hosted anywhere. Suggested URL: `concentrik.com/planx`.
 
 ```
 index.html        the page (all CSS and JS inline)
-assets/           photos and logo taken from the brochure
+assets/           logo and background image from the brochure
 apps-script.gs    form receiver: Google Sheet + email notification
 ```
 
+The form asks for name, email and consent, and nothing else.
+
 ## 1. Connect the form (10 minutes)
 
-1. Create a Google Sheet called "Concentrik leads".
+1. Create a Google Sheet called "Concentrik mailing list".
 2. In the Sheet, open **Extensions → Apps Script**. Paste in `apps-script.gs` and save.
-3. Set `NOTIFY_EMAIL` to the person who should get each lead.
+3. Set `NOTIFY_EMAIL` to the person who should hear about each sign-up, or `''` for none.
 4. **Deploy → New deployment → Web app**. Execute as: *Me*. Who has access: *Anyone*. Authorise.
 5. Copy the `/exec` URL and paste it into `CONFIG.ENDPOINT` near the bottom of `index.html`.
-6. Send a test from your phone. A row should appear in the "Plan X leads" tab, and an email should arrive.
+6. Sign up from your phone. A row should appear in the "Mailing list" tab.
 
-You can use any other endpoint that accepts a form-encoded POST (Formspree, n8n, Make, Zapier, or a HubSpot or Nexudus middleware). Change `CONFIG.ENDPOINT` and nothing else. While `ENDPOINT` is empty, the form shows the thank-you message but **sends nothing**.
+If Concentrik uses Mailchimp, Brevo or a CRM, point `CONFIG.ENDPOINT` at a webhook for it (via Zapier, Make or n8n) instead. The page sends `fullName`, `email`, `consent`, `event`, `leadSource` and the UTM values as a form-encoded POST. While `ENDPOINT` is empty, the form shows the thank-you message but **sends nothing**.
 
 ## 2. QR code
-
-Point the brochure QR at:
 
 ```
 https://concentrik.com/planx?utm_source=brochure&utm_medium=qr&utm_campaign=plan-x
 ```
 
-The UTM values are saved with every lead. If they're missing, the page fills in the same defaults. To pre-select an option, add `&interest=office`, `executive` or `founder`.
-
 ## 3. Before it goes live
 
 - [ ] `CONFIG.ENDPOINT` set and tested on a phone over mobile data
-- [ ] Privacy notice link (`concentrik.com/privacy`) works and covers form data
-- [ ] Reply time confirmed. The page says "personally", not a number of days
+- [ ] Privacy notice link (`concentrik.com/privacy`) works and covers the mailing list
+- [ ] Every email sent to the list has an unsubscribe link (the consent line promises it)
 - [ ] SVG logo when available (replaces `assets/logo-white.png`)
-- [ ] Analytics: the page pushes `cta_click`, `invitation_form_start` and `invitation_form_submit` to `dataLayer`, but only if a consented tag manager is present. No tags load by default.
 
-The page is set to `noindex` because it's an event page. Remove that line if you want it in search.
+The page pushes `signup_form_start` and `signup_form_submit` to `dataLayer` only if a consented tag manager is on the page. No tags load by default. The page is set to `noindex` because it's an event page.
